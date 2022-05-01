@@ -1,0 +1,41 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-searchbar showCancelButton="focus"></ion-searchbar>
+    <ion-buttons slot="primary">
+      <ion-button [routerLink]="['/products']"><ion-icon slot="icon-only" name="restaurant-outline"></ion-icon></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <h2 class="purple">My Cart</h2>
+  
+  <ion-list>
+    <ion-item lines="none" *ngFor="let c of cart">
+      <img src="{{ c.imgSrc }}">
+      <div class="desc">
+        <ion-label class="ion-text-wrap">{{ c.name }}</ion-label>
+        <ion-note>
+          <span class="name">Price:</span> <span class="amt price">{{ c.price | currency: '₱' }}</span><br>
+          <span class="name">Qty:</span> <span class="amt">{{ c.amount }}</span>
+        </ion-note>
+      </div>
+      <button (click)="showConfirm(c)" value="Remove Product" class="remove">
+        <ion-icon slot="icon-only" name="close-outline"></ion-icon>
+      </button>
+    </ion-item>
+  </ion-list>
+  
+  <ion-card>
+    <strong>Subtotal:</strong><span class="amount price">{{ calculateSubtotal() | currency: '₱' }}</span>
+  </ion-card>
+  
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <ion-button [routerLink]="['/payment']">Proceed to Checkout <ion-icon name="arrow-forward-outline"></ion-icon></ion-button>
+</ion-footer>

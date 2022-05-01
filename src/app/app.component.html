@@ -1,0 +1,35 @@
+<ion-app>
+  <ion-menu menuId="main-menu" contentId="main">
+    <ion-content>
+      
+      <!-- header -->
+      <div class="header">
+        <div class="avatar">
+          <img src="..\assets\images\svg\side-menu\avatar.png" class="user-img">
+          <img src="..\assets\images\svg\side-menu\blob-o.svg" class="blob">
+        </div>
+        <div class="info">
+          <div class="name">
+            <ion-icon name="at-outline"></ion-icon>
+            <ion-label class="username">username</ion-label>
+          </div>
+          <ion-label class="user-id">12345</ion-label>
+        </div>
+      </div>
+      
+      <!-- items -->
+      <ion-list class="menu-items" lines="none">
+        <ion-menu-toggle auto-hide="false" *ngFor="let pages of Pages; let i = index">
+          <ion-item (click)="activeIndex = i" routerDirection="root" [routerLink]="[pages.url]" lines="none" detail="false" [class.active]="activeIndex == i">
+            <ion-icon slot="start" [name]="pages.icon + '-outline'"></ion-icon>
+            <ion-label>{{ pages.title }}</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+      
+      <img src="..\assets\images\svg\side-menu\bg-1.svg" class="wave">
+      
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="main"></ion-router-outlet>
+</ion-app>

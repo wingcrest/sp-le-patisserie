@@ -1,0 +1,22 @@
+<ion-content>
+  
+  <ion-button (click)="closeModal()" icon="arrow-back-outline" class="back-button"><ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon></ion-button>
+  
+  <div *ngIf="activeItem">
+    <img src="{{ activeItem.imgSrc }}">
+    <div class="desc">
+      <ion-label class="orange">{{ activeItem.name }}</ion-label>
+      <ion-note class="price">{{ activeItem.price | currency: '₱' }}</ion-note>
+      <ion-note>{{ activeItem.desc }}</ion-note>
+    </div>
+    <div class="buttons">
+      <div class="qty">
+        <button (click)="this.cartService.decreaseProduct(activeItem)"><ion-icon name="remove-outline"></ion-icon></button>
+        <input type="number" disabled value="{{ activeItem.amount }}">
+        <button (click)="this.cartService.increaseProduct(activeItem)"><ion-icon name="add-outline"></ion-icon></button>
+      </div>
+      <button (click)="showToastMsg(activeItem)" class="add-to-cart">Add to Cart</button>
+    </div>
+  </div>
+  
+</ion-content>

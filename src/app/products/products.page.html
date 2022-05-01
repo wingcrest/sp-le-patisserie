@@ -1,0 +1,33 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-searchbar showCancelButton="focus"></ion-searchbar>
+    <ion-buttons slot="primary">
+      <ion-button [routerLink]="['/cart']"><ion-icon slot="icon-only" name="bag-outline"></ion-icon></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <div class="heading">
+    <h2 class="white">Products</h2>
+    <ion-button><ion-icon name="options-outline"></ion-icon> Filter</ion-button>
+  </div>
+  
+  <ion-list class="ion-no-padding">
+    <ion-item (click)="openProductModal(p)" lines="none" *ngFor="let p of products">
+      <div class="product">
+        <img src="{{ p.imgSrc }}">
+        <div class="info">
+          <ion-label class="ion-text-wrap">{{ p.name }}</ion-label>
+          <ion-note>{{ p.price }}</ion-note>
+        </div>
+      </div>
+    </ion-item>
+  </ion-list>
+  
+  
+</ion-content>

@@ -1,0 +1,8 @@
+{
+  "name": "Le Patisserie",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

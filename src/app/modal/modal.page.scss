@@ -1,0 +1,40 @@
+ion-button {
+    width: 60%;
+    // margin: 7% 20% 0;
+    margin-top: 8%;
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    --background: var(--purple);
+    --border: 1px solid var(--purple);
+    --border-radius: 20px !important;
+    --box-shadow: none;
+}
+
+ion-content {
+    --background: var(--yellow);
+}
+
+h1 {
+    margin: 0;
+    line-height: 110%;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img {
+    display: block;
+    width: 160px;
+    margin-bottom: 7%;
+    // position: absolute;
+    // left: 50%;
+    // transform: translateX(-50%);
+}

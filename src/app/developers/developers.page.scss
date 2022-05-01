@@ -1,0 +1,71 @@
+ion-content{
+    --background: var(--yellow);
+}
+
+ion-toolbar{
+    --background: var(--yellow);
+}
+
+ion-card, .ion1, .ion2{
+    width: 40%;
+    height: 18%;
+    background-color: rgba(219, 154, 143, 0.521);   
+    position: fixed;
+}
+
+ion-card-content{
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+ion-icon{
+    font-size: 36px;
+    color: var(--purple);
+    padding-left: 8px;
+}
+
+.ion1{
+    top: 17%;
+    left: 2%;
+    border-radius: 20px;
+    border: 3px solid var(--purple);
+}
+
+.ion2{
+    top: 78%;
+    left: 53%;
+    border-radius: 20px;
+    border: 3px solid var(--purple);
+}
+
+h2{
+    margin-left: 18%;
+    text-shadow: 2px 1px 3px var(--white);
+    margin-top: 10px;
+}
+
+.anna, .ninz{
+    height: 180px;
+    width: 180px;
+    border-radius: 100px;
+    border: 15px solid var(--pink);
+    position: fixed;
+}
+
+.graphic{
+    position:fixed;
+    z-index: -1;
+    top:205px;
+}
+
+.anna{
+    left: 170px;
+    top: 120px;
+}
+
+.ninz{
+    top: 560px;
+    left: 13px;
+}
+

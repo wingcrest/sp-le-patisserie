@@ -1,0 +1,72 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title class="ion-text-center">Payment</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button icon="arrow-back-outline" defaultHref="/cart"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <h2 class="purple">Personal Information</h2>
+  
+  <form>
+    <div class="form-content">
+      <ion-label>Name</ion-label>
+      <div class="form-fields">
+        <ion-input placeholder="First Name"></ion-input>
+        <ion-input placeholder="Last Name"></ion-input>
+      </div>
+    </div>
+    <div class="form-content">
+      <ion-label>Email Address</ion-label>
+      <ion-input type="email" placeholder="Email"></ion-input>
+    </div>
+    <div class="form-content">
+      <ion-label>Contact No.</ion-label>
+      <ion-input type="number" placeholder="Contact No."></ion-input>
+    </div>
+    <div class="form-content">
+      <ion-label>Address</ion-label>
+      <div class="form-fields">
+        <ion-input placeholder="Province"></ion-input>
+        <ion-input placeholder="City"></ion-input>
+      </div>
+      <ion-input placeholder="Street"></ion-input>
+      <ion-input type="number" placeholder="Zip Code"></ion-input>
+    </div>
+  </form>
+  
+  <h2 class="purple">Payment Information</h2>
+  
+  <ion-card class="total">
+    <strong>Subtotal:</strong><span class="amount">{{calculateSubtotal() | currency: '₱'}}</span><br>
+    <strong>Delivery Fee:</strong> <span class="amount">{{showDeliveryFee() | currency: '₱'}}</span><br>
+    <strong>Total:</strong><span class="amount">{{getTotal() | currency: '₱'}}</span>
+  </ion-card>
+
+  <form>
+    <div class="form-content">
+      <ion-label>Mode of Payment</ion-label>
+      <ion-select value="gcash" okText="Okay" cancelText="Dismiss">
+        <ion-select-option value="gcash">GCash</ion-select-option>
+        <ion-select-option value="paypal">Paypal</ion-select-option>
+        <ion-select-option value="card">Credit Card</ion-select-option>
+        <ion-select-option value="cod">Cash On Delivery</ion-select-option>
+      </ion-select>
+    </div>
+  </form>
+  
+  <h2 class="purple">Others</h2>
+  
+  <form>
+    <div class="form-content">
+      <ion-label>Special Instructions</ion-label>
+      <ion-textarea placeholder="..."></ion-textarea>
+    </div>
+  </form>
+  
+  <ion-button class="proceed" (click)="openCheckoutModal()">Checkout</ion-button>
+  
+</ion-content>

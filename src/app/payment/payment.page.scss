@@ -1,0 +1,106 @@
+ion-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+ion-content, ion-toolbar {
+    --background: var(--yellow);
+}
+
+h2 {
+    margin: 30px 10% 20px;
+    font-weight: 600 !important;
+    text-shadow: 2px 1px 3px var(--white);
+}
+
+form {
+    margin: 0 20px;
+
+    .form-content {
+        display: flex;
+        flex-direction: column;
+
+        .form-fields {
+            display: flex;
+            align-items: center;
+        }
+
+        ion-label {
+            margin-bottom: 10px;
+            color: var(--purple);
+            font-family: 'Poppins', sans-serif !important;
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: 0.4px;
+            text-transform: uppercase;
+        }
+    
+        ion-input, ion-select, ion-textarea {
+            margin-bottom: 15px;
+            background: var(--white);
+            font-size: 14px;
+            border: 1px solid var(--white);
+            border-radius: 15px;
+            --background: var(--white);
+    
+            &.has-focus {
+                border: 1px solid var(--pink);
+            }
+        }
+
+        ion-input, ion-textarea {
+            margin-right: 10px;
+            --color: var(--text-color);
+            --padding-start: 15px;
+            --padding-end: 15px;
+        
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+ion-card {
+    display: block;
+    margin: 7% 5% 30px;
+    padding: 15px 25px;
+    width: 90%;
+    box-shadow: none;
+    border-radius: 15px;
+    --background: var(--white);
+
+    strong {
+        font-family: 'Poppins', sans-serif !important;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
+    }
+
+    .amount {
+        float: right;
+    }
+
+    strong, .amount {
+        color: var(--purple);
+    }
+
+}
+
+.proceed {
+    width: 50%;
+    height: 50px;
+    margin: 30px 25%;
+    font-size: 16px;
+    font-weight: 600;
+    --background: var(--purple);
+    color: var(--white);
+    --border: 1px solid var(--purple);
+    --border-radius: 20px !important;
+    --box-shadow: none;
+    
+}

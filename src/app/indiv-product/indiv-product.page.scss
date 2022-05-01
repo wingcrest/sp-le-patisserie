@@ -1,0 +1,113 @@
+ion-content {
+    --background: var(--white);
+}
+
+.back-button {
+    position: fixed;
+    top: 13px;
+    left: 15px;
+    z-index: 10;
+    --padding-top: 18px !important;
+    --padding-bottom: 18px !important;
+    --padding-start: 5px !important;
+    --padding-end: 5px !important;
+    --background: rgba(242, 233, 225, 0.548);
+    --border-radius: 50%;
+    --box-shadow: none !important;
+    
+    ion-icon {
+        color: var(--purple);
+    }
+}
+
+img {
+    display: block;
+    z-index: 1;
+}
+
+.desc {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: -40px;
+    padding: 30px 40px;
+    background: var(--white);
+    border-radius: 50px 0 0 0;
+    z-index: 2;
+    
+    ion-label {
+        margin-top: 10px;
+        font-family: 'Ephesis', 'Lora' !important;
+        font-size: 45px;
+        font-weight: bold;
+    }
+    
+    .price {
+        margin: 5px 0;
+        font-family: 'Poppins', sans-serif !important;
+        font-weight: 500;
+    }
+}
+
+.buttons {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    bottom: 0;
+    width: 100%;
+    background: var(--white);
+    z-index: 3;
+    
+    .qty {
+        display: flex;
+        align-items: center;
+        margin: 0 6% 0 10%;
+        
+        button {
+            // height: 14px;
+            padding: 4px 5px;
+            background: var(--yellow);
+            border-radius: 50%;
+            transition: all 0.3s;
+            
+            &:active {
+                background: rgb(230, 198, 105);
+                transition: all 0.3s;
+            }
+            
+            ion-icon {
+                font-size: 14px;
+                color: var(--orange);
+            }
+        }
+        
+        input[type="number"] {
+            width: 40px;
+            background: transparent;
+            font-family: 'Poppins', sans-serif !important;
+            font-weight: 600 !important;
+            color: var(--orange);
+            text-align: center;
+            border: none;
+        }
+    }
+    
+    .add-to-cart {
+        right: 0;
+        width: 60%;
+        padding: 15px 0;
+        background: var(--yellow);
+        float: right;
+        color: var(--orange);
+        font-family: 'Poppins', sans-serif !important;
+        font-size: 16px;
+        text-align: center;
+        text-transform: uppercase;
+        border-radius: 50px 0 0 0;
+    }
+}
+
+.toast {
+    --color: var(--white);
+    --background: var(--pink);
+}

@@ -1,0 +1,46 @@
+ion-content{
+    --background: var(--pink);
+}
+
+ion-toolbar{
+    --background: var(--pink);
+}
+
+h2{
+    margin-left: 18%;
+    text-shadow: 2px 1px 3px var(--purple);
+    margin-top: 10px;
+    
+}
+p{
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    text-align: center;
+    color: var(--white);
+        font-size: 13px;
+    font-weight: bold;
+    text-shadow: 2px 1px 3px var(--purple);
+}
+
+.address, .contact, .num {
+    position: fixed;
+}
+
+.address{
+    width: 100%;
+    height: auto;
+    top: 200px;
+}
+
+.contact{
+    width: 100%;
+    height: auto;
+    top: 370px;
+}
+
+.num{
+    width: 100%;
+    height: auto;
+    top: 540px;
+}

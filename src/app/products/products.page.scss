@@ -1,0 +1,96 @@
+ion-toolbar {
+    --background: var(--pink);
+
+    ion-menu-button, ion-back-button, ion-icon {
+        color: var(--white);
+    }
+}
+
+ion-content {
+    --background: var(--pink);
+}
+
+.heading {
+    width: 80%;
+    margin: 30px 10% 20px;
+
+    h2 {
+        margin-bottom: 10px;
+        font-weight: 600 !important;
+        text-shadow: 2px 1px 3px var(--purple);
+    }
+
+    ion-button {
+        color: var(--white);
+        --background: var(--pink);
+        --border-width: 1px;
+        --border-style: solid;
+        --border-color: var(--white) !important;
+        --border-radius: 15px;
+        --box-shadow: none !important;
+
+        ion-icon {
+            margin-right: 5px;
+            color: var(--white);
+        }
+    }
+}
+
+ion-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 4%;
+    margin-bottom: 30px;
+    background: var(--pink);
+}
+
+ion-item  {
+    width: 46%;
+    margin-right: 4%;
+    margin-bottom: 4%;
+    background: var(--white);
+    border-radius: 15px;
+    --background: var(--white);
+
+    &:nth-of-type(2n) {
+        margin-right: 0;
+    }
+
+    .product {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 10px;
+    }
+
+    img {
+        width: 100%;
+        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
+        border-radius: 15px;
+    }
+
+    .info {
+        width: 100%;
+    }
+
+    ion-label {
+        margin: 10px 0 0;
+        color: var(--orange);
+        font-family: 'Ephesis', cursive !important;
+        font-size: 24px !important;
+        font-weight: bold;
+        line-height: 25px !important;
+        text-transform: capitalize;
+    }
+
+    ion-note {
+        font-size: 13px;
+        font-weight: 500;
+        text-align: left;
+
+        &::before {
+            margin-right: 2px;
+            content: '\20B1';
+        }
+    }
+}

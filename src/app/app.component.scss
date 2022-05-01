@@ -1,0 +1,111 @@
+ion-content {
+    --background: #fcf6e4;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    margin: 13% 0 5% 12%;
+    
+    .avatar {
+        position: relative;
+        top: 0;
+        left: 0;
+        
+        .blob {
+            display: block;
+            position: relative;
+            top: -9px;
+            left: -8px;
+            width: 95px;
+            z-index: 2;
+        }
+        
+        .user-img {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 80px;
+            clip-path: circle(50%);
+        }
+    }
+    
+    .name {
+        display: flex;
+        align-items: center;
+        
+        ion-icon {
+            color: var(--pink);
+            font-size: 18px;
+        }
+        
+        .username {
+            color: var(--text-color);
+            font-family: 'Poppins', sans-serif !important;
+            font-size: 15px;
+        }
+    }
+    
+    .user-id {
+        margin-left: 2px;
+        color: #8f8f8f;
+        font-size: 13px;
+        
+        &::before {
+            content: 'ID#';
+        }
+    }
+    
+    
+}
+
+.menu-items {
+    margin: 0 20px;
+    background: var(--l-yellow);
+    
+    ion-icon {
+        margin-right: 20px;
+        color: var(--pink);
+        font-size: 20px;
+    }
+    
+    ion-item {
+        // padding: 7px 0 7px 30px;
+        margin-bottom: 5px;
+        padding-left: 7px;
+        color: var(--purple);
+        --background: var(--l-yellow);
+    }
+    
+    ion-label {
+        color: var(--purple);
+        font-family: 'Poppins', sans-serif !important;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+    }
+    
+    .active {
+        background: var(--purple);
+        border-radius: 20px;
+        --background: var(--purple);
+        
+        ion-label {
+            color: var(--yellow);
+        }
+        
+        ion-icon {
+            color: var(--yellow);
+        }
+    }
+    
+}
+
+.wave {
+    position: fixed;
+    display: block;
+    bottom: 0;
+    z-index: -1;
+}

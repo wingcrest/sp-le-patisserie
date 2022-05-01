@@ -1,0 +1,14 @@
+<ion-content [fullscreen]="true">
+  <ion-button [routerLink]="['/products']" class="btnProducts">Shop Now<ion-icon name="arrow-forward-outline"></ion-icon></ion-button>
+  <ion-slides #slides pager="true" [options]="slideOpts" (ionSlideDidChange)= "ionSlideDidChange(slides)">
+    <ion-slide class="step-one">
+      <img src="/assets/homepagePics/first.png">
+    </ion-slide>
+    <ion-slide class="step-one">
+      <img src="/assets/homepagePics/second.png">
+    </ion-slide>
+    <ion-slide class="step-one">
+      <img src="/assets/homepagePics/third.png">
+    </ion-slide>
+  </ion-slides>
+</ion-content>
